@@ -1,7 +1,7 @@
 <webscript>
 	<shortname>counter</shortname>
 	<description>Retrieves a counter value with the given name.</description>
-	<url>/counter/{name}</url>
+	<url>/counter/{name}?value={value}</url>
 	<family>Counter Demo</family>
 	<format default="json" />
 	<authentication>user</authentication>
