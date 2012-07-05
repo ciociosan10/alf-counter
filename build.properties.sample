@@ -1,0 +1,5 @@
+alfresco.sdk.dir=/Users/cpaul/dev/alfresco/4_0_1/alfresco-enterprise-sdk-4.0.1
+alfresco.sdk.remote.dir=${alfresco.sdk.dir}/lib/remote
+alfresco.sdk.server.dir=${alfresco.sdk.dir}/lib/server
+alfresco.web.dir=${project.dir}/../../../../tomcat/webapps/alfresco
+alfresco.war.path=${project.dir}/../../../../tomcat/webapps/alfresco.war

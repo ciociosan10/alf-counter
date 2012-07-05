@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<model name="dm:demomodel" xmlns="http://www.alfresco.org/model/dictionary/1.0">
+
+	<description>Demo Counter Model</description>
+	<author>Tribloom - Chris Paul</author>
+	<version>1.0</version>
+
+	<imports>
+		<import uri="http://www.alfresco.org/model/dictionary/1.0" prefix="d" />
+		<import uri="http://www.alfresco.org/model/content/1.0" prefix="cm" />
+		<import uri="http://www.alfresco.org/model/system/1.0" prefix="sys" />
+		<import uri="http://www.alfresco.org/model/datalist/1.0" prefix="dl" />
+	</imports>
+
+	<namespaces>
+		<namespace uri="http://www.tribloom.com/model/demo/1.0" prefix="dm" />
+	</namespaces>
+	
+	<constraints>
+		<constraint name="dm:positiveInteger" type="MINMAX">
+			<parameter name="minValue">
+				<value>0</value>
+			</parameter>
+			<parameter name="maxValue">
+				<value>999999</value>
+			</parameter>
+		</constraint>
+	</constraints>
+
+	<types>
+		<type name="dm:counter">
+			<title>Counter</title>
+			<parent>cm:content</parent>
+			<properties>
+				<property name="dm:count">
+					<title>Value</title>
+					<type>d:int</type>
+					<default>0</default>
+					<constraints>
+						<constraint ref="dm:positiveInteger" />
+					</constraints>
+				</property>
+			</properties>
+		</type>
+	</types>
+	
+</model>
